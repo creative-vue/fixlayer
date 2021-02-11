@@ -1,0 +1,25 @@
+{
+  "name": "fixlayer",
+  "version": "0.0.1",
+  "author": "fixrule",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/fixlayer.min.js",
+  "scripts": {
+    "ts": "tsc src/fixlayer.ts --outDir src/js --alwaysStrict --removeComments --sourceMap --watch",
+    "css": "sass --watch src:dist --style compressed",
+    "dist": "gulp"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "delete": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.32.6",
+    "typescript": "^4.1.3"
+  }
+}

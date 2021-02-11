@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixlayer</title>
+    <link rel="stylesheet" href="dist/default.css">
+</head>
+<body>
+    <div style="padding-top: 80px;text-align: center;">
+        <div style="font-size: 20px;margin-bottom: 20px;">Fixlayer Demo</div>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showAlert()">Alert</button>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showConfirm()">Confirm</button>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showPrompt()">Prompt</button>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showNotify()">Notify Default</button>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showNotify('success')">Notify Success</button>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showNotify('error')">Notify Error</button>
+        <button style="border: 1px solid #ccc;font-size:16px;padding: 8px 14px;margin:20px" onclick="showNotify('warning')">Notify Warning</button>
+    </div>
+
+    <script src="dist/fixlayer.min.js"></script>
+    <script>
+        function showAlert() {
+            fixlayer.alert('我是内容', {
+                onYes: function(e) {
+                    console.log(e);
+                }
+            });
+        }
+        function showConfirm() {
+            fixlayer.confirm('是否要删除？', {
+                title: '警告',
+                onYes: function(e) {
+                    console.log(e);
+                }
+            });
+        }
+        function showPrompt() {
+            fixlayer.prompt('请输入内容：', {
+                onYes: function(e, v) {
+                    fixlayer.success('您输入的内容是：' + v);
+                }
+            });
+        }
+        function showNotify(type) {
+            fixlayer.notify('通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息通知信息', type, {
+                // time: 0,
+                position: 'top-center',
+            });
+        }
+    </script>
+</body>
+</html>
