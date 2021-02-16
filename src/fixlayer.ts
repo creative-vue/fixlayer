@@ -31,7 +31,7 @@ class Fixlayer {
 
     defaultNotifyOption: notifyParams = {
         position: 'top-right',
-        time: 5000,
+        time: 2000,
         onHidden: undefined
     }
 
